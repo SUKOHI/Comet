@@ -1,0 +1,41 @@
+<html>
+<head>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.comet.js"></script>
+<script>
+
+	var interval = 1000;
+	$.comet.init({
+		
+		type: 'POST', 
+		data: {	// data will automatically contain { last_updated: $.now() } when connecting the url.
+			'key_1': 'value_1', 
+			'key_2': 'value_2', 
+			'key_3': 'value_3'
+		}, 
+		dataType: 'json',
+		url: 'comet.php', 
+		success: function(data, textStatus, jqXHR) {
+			
+			$('#chat').append($('<li>').text(data +": "+ $.comet.lastUpdated));
+			
+		}, 
+		error: function(jqXHR, textStatus, errorThrown) {
+			
+			// something..
+			
+		}
+		
+	}, interval);
+
+</script>
+
+</head>
+<body>
+
+<h2>Comet Test</h2>
+<ul id="chat"></ul>
+
+</body>
+</html>
