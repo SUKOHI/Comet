@@ -3,6 +3,8 @@ Comet
 
 A system that provides a chat system like Comet using PHP + JavaScript(jQuery)
 
+[Demo](http://chat.capilano-fw.com)
+
 [Usage]: 
 
 After placing all files into proper folder, access index.html.
