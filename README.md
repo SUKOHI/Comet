@@ -2,7 +2,7 @@
 
 A system that provides a chat system like Comet using PHP + JavaScript(jQuery)
 
-[Demo](http://chat.capilano-fw.com)
+[Demo](https://chat.capilano-fw.com)
 
 # Usage
 
